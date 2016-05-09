@@ -1,3 +1,64 @@
 <resources>
-    <string name="app_name">RxReader</string>
+    <string name="app_name">简阅</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="pre_refresh_data" translatable="false">refresh_data</string>
+    <string name="pre_get_image" translatable="false">get_image</string>
+    <string name="pre_cache_size" translatable="false">cache_size</string>
+    <string name="pre_feedback" translatable="false">feedback</string>
+    <string name="pre_author" translatable="false">author</string>
+    <string name="pre_version" translatable="false">version</string>
+    <string name="pre_nav_color" translatable="false">pre_nav_color</string>
+    <string name="pre_use_local" translatable="false">pre_use_local</string>
+    <string name="pre_status_bar" translatable="false">pre_status_bar</string>
+
+    <string name="default_description">生活的美好，需要你用心去发现，用眼去摄录。</string>
+    <string name="fragment_wexin_title">微信精选</string>
+    <string name="fragment_zhihu_title">知乎日报</string>
+    <string name="fragment_guokr_title">果壳热门</string>
+    <string name="fragment_video_title">视频推荐</string>
+    <string name="fragment_it_title">IT之家</string>
+
+    <string name="activity_setting_title">设置</string>
+    <string name="activity_change_channel_title">更改栏目</string>
+
+    <string name="share_tail">\r\n(分享自微阅，小而美的阅读体验！)</string>
+    <string name="share">分享到</string>
+    <string name="request_storage_permission">请允许此应用的读写文件以便于缓存文件！</string>
+    <string name="re_request_permission">没有权限臣妾做不到呀！</string>
+    <string name="toast_wifi_refresh_data">非WIFI下不自动加载数据！</string>
+    <string name="cache_size">缓存大小：</string>
+    <string name="fragment_video_get_url">正在获取播放地址…</string>
+    <string name="fragment_video_get_url_error">获取播放地址失败，请检查网络！</string>
+    <string name="description">小而美的阅读体验</string>
+    <string name="help_and_suggest">帮助与反馈</string>
+    <string name="about">关于</string>
+    <string name="open_with_browser">使用浏览器打开</string>
+    <string name="update_button">现在升级</string>
+    <string name="update_description">新版%1$s版本可用\n更新内容\n%2$s</string>
+    <string name="update_title">有更新可用</string>
+    <string name="update_no_update">没有更新可用</string>
+    <string name="update_no_update_description">没有更新可用，请稍后检查！</string>
+    <string name="update_not_show">不再提示此更新</string>
+    <string name="activity_change_channel_show_channel">显示的栏目</string>
+    <string name="activity_change_channel_other_channel">未显示的栏目</string>
+
+    <string name="common_loading">正在加载…</string>
+    <string name="common_loading_error">加载失败，请检查网络！</string>
+    <string name="common_view_loading">正在拼命加载数据…</string>
+    <string name="common_view_release">释放加载</string>
+    <string name="common_view_loading_ok">加载成功</string>
+    <string name="common_i_know">知道了</string>
+    <string name="comon_retry">重试</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_swipe_to_load_more">上拉加载更多</string>
+    <string name="common_load_more">加载更多</string>
+    <string name="common_load_complete">加载完成</string>
+    <string name="common_refresh_complete">刷新完成</string>
+    <string name="common_swipe_to_refresh">下拉刷新</string>
+    <string name="common_set_read">标记为已读</string>
+    <string name="common_set_unread">标记为未读</string>
+
 </resources>
