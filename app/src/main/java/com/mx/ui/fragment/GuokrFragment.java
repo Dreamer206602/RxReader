@@ -12,12 +12,10 @@ import com.mx.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class GuokrFragment extends Fragment {
+public class GuokrFragment extends BaseFragment {
 
 
-    public GuokrFragment() {
-        // Required empty public constructor
-    }
+
 
 
     @Override
