@@ -61,4 +61,7 @@
     <string name="common_set_read">标记为已读</string>
     <string name="common_set_unread">标记为未读</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
