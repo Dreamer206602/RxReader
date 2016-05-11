@@ -35,6 +35,8 @@
         </activity>
         <activity android:name=".ui.activity.ZhihuStoryActivity">
         </activity>
+        <activity android:name=".ui.activity.ItHomeActivity">
+        </activity>
     </application>
 
 </manifest>
