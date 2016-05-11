@@ -25,10 +25,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mx.R;
+import com.mx.event.StatusEvent;
 import com.mx.iView.IMainView;
 import com.mx.model.UpdateItem;
 import com.mx.presenter.IMainPresenter;
 import com.mx.presenter.impl.MainPresenterImpl;
+import com.mx.utils.RxBus;
 import com.mx.utils.SharePreferenceUtil;
 
 import java.io.File;
@@ -37,6 +39,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Subscription;
+import rx.functions.Action1;
 
 public class MainActivity extends BaseActivity implements
         NavigationView.OnNavigationItemSelectedListener, IMainView {
@@ -116,6 +119,15 @@ public class MainActivity extends BaseActivity implements
 
         mIMainPresenter.initMenu(mNavView);
         mIMainPresenter.checkUpdate();
+
+        mSubscription= RxBus.getDefaultInstance().toObservable(StatusEvent.class)
+                .subscribe(new Action1<StatusEvent>() {
+                    @Override
+                    public void call(StatusEvent statusEvent) {
+                       finish();
+                        startActivity(new Intent(MainActivity.this,MainActivity.class));
+                    }
+                });
 
     }
 

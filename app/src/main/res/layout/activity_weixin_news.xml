@@ -56,6 +56,6 @@
         app:fabSize="normal"
         app:layout_behavior="com.mx.ui.view.ScrollAwareFABBehavior"
         app:pressedTranslationZ="12dp"
-        app:rippleColor="#33728dff"/>
+        app:rippleColor="#e90b37"/>
 
 </android.support.design.widget.CoordinatorLayout>
