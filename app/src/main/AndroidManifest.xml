@@ -37,6 +37,10 @@
         </activity>
         <activity android:name=".ui.activity.ItHomeActivity">
         </activity>
+        <activity android:name=".ui.activity.VideoActivity">
+        </activity>
+        <activity android:name=".ui.activity.VideoWebViewActivity">
+        </activity>
     </application>
 
 </manifest>
