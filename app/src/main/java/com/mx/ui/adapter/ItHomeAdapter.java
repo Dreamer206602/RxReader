@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -90,7 +91,8 @@ public class ItHomeAdapter extends  RecyclerView.Adapter<ItHomeAdapter.ItViewHol
                             case R.id.pop_share:
                                 Intent shareIntent = new Intent();
                                 shareIntent.setAction(Intent.ACTION_SEND);
-                                shareIntent.putExtra(Intent.EXTRA_TEXT, itHomeItem.getTitle() + " http://ithome.com" + itHomeItem.getUrl() + mContext.getString(R.string.share_tail));
+                                shareIntent.putExtra(Intent.EXTRA_TEXT, itHomeItem.getTitle() +
+                                        " http://ithome.com" + itHomeItem.getUrl() + mContext.getString(R.string.share_tail));
                                 shareIntent.setType("text/plain");
                                 //设置分享列表的标题，并且每次都显示分享列表
                                 mContext.startActivity(Intent.createChooser(shareIntent, mContext.getString(R.string.share)));
@@ -102,6 +104,17 @@ public class ItHomeAdapter extends  RecyclerView.Adapter<ItHomeAdapter.ItViewHol
                 popupMenu.show();
             }
         });
+        //runEnterAnimation(holder.itemView);
+    }
+
+    public void runEnterAnimation(View view){
+        view.setScaleX(3f);
+        view.setScaleY(3f);
+        view.animate()
+                .setStartDelay(100)
+                .setInterpolator(new DecelerateInterpolator(3f))
+                .setDuration(700)
+                .start();
     }
 
     @Override
