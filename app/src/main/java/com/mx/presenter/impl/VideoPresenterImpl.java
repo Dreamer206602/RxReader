@@ -31,7 +31,7 @@ public class VideoPresenterImpl extends BasePresenterImpl implements IVideoPrese
     private Gson mGson = new Gson();
 
     public VideoPresenterImpl(IVideoFragmentView IVideoFragmentView, Context context) {
-        if (IVideoFragmentView != null) {
+        if (IVideoFragmentView == null) {
             throw new IllegalArgumentException("iVideoFragment must not bull");
         }
         mIVideoFragmentView = IVideoFragmentView;

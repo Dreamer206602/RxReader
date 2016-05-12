@@ -70,7 +70,8 @@ public class MainPresenterImpl extends BasePresenterImpl implements IMainPresent
                         String savedChannel = mSharedPreferences.
                                 getString(SharePreferenceUtil.SAVED_CHANNEL, null);
                         if (TextUtils.isEmpty(savedChannel)) {
-                            Collections.addAll(savedChannelList, Config.Channel.values());
+                            Collections.addAll(savedChannelList,
+                                    Config.Channel.values());
                         } else {
                             for (String s : savedChannel.split(",")) {
                                 savedChannelList.add(Config.Channel.valueOf(s));
@@ -140,7 +141,6 @@ public class MainPresenterImpl extends BasePresenterImpl implements IMainPresent
             case "IT":
                 mFragments.add(new ItHomeFragment());
                 break;
-
         }
 
     }

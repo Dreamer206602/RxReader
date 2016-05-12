@@ -196,7 +196,8 @@ public class MainActivity extends BaseActivity implements
             fragment.setExitTransition(slideTransition);
         }
         if (currentFragment == null ||
-                !currentFragment.getClass().getName().equals(fragment.getClass().getName())) {
+                !currentFragment.getClass().getName()
+                        .equals(fragment.getClass().getName())) {
 
             getSupportFragmentManager().beginTransaction().
                     replace(R.id.replace, fragment).commit();
