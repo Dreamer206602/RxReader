@@ -203,7 +203,6 @@ public class MainActivity extends BaseActivity implements
                     replace(R.id.replace, fragment).commit();
             currentFragment = fragment;
             ActionBar actionBar = getSupportActionBar();
-
             assert actionBar != null;
             actionBar.setTitle(title);
 
