@@ -109,12 +109,13 @@ public class MainActivity extends BaseActivity implements
         LinearLayout llImage = (LinearLayout) headLayout.findViewById(R.id.side_image);
         TextView imageDescription = (TextView) headLayout.findViewById(R.id.image_description);
 
-        if (new File(getFilesDir().getPath() + "/bg.png").exists()) {
+        if (new File(getFilesDir().getPath() + "/bg.jpg").exists()) {
             BitmapDrawable bitmapDrawable = new
-                    BitmapDrawable(getResources(), getFilesDir().getPath() + "/bg.png");
+                    BitmapDrawable(getResources(),
+                    getFilesDir().getPath() + "/bg.jpg");
             llImage.setBackground(bitmapDrawable);
             imageDescription.setText(getSharedPreferences(SharePreferenceUtil.SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE).getString(SharePreferenceUtil.IMAGE_DESCRIPTION,
-                    "我的愿望，就是希望你的愿望里也有我"));
+                    "我的愿望，就是希望你的愿望里,也有我"));
         }
 
         mIMainPresenter.initMenu(mNavView);

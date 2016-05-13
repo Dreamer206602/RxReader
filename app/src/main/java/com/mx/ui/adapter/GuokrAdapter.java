@@ -82,14 +82,13 @@ public class GuokrAdapter extends RecyclerView.Adapter<GuokrAdapter.GuokrViewHol
                 popupMenu.getMenu().removeItem(R.id.pop_share);
                 popupMenu.getMenu().removeItem(R.id.pop_fav);
                 final boolean isRead=DBUtils.getDBUtils(mContext).isRead(
-                        Config.GUOKR,guokrHotItem.getId(),1
-                );
+                        Config.GUOKR,guokrHotItem.getId(),1);
                 if(!isRead)
                     popupMenu.getMenu().findItem(R.id.pop_unread).setTitle(
                             R.string.common_set_read);
                 else
                     popupMenu.getMenu().findItem(R.id.pop_unread)
-                    .setTitle(R.string.common_set_read);
+                    .setTitle(R.string.common_set_unread);
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {

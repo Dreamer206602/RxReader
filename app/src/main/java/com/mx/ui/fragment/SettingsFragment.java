@@ -1,17 +1,19 @@
 package com.mx.ui.fragment;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.support.annotation.Nullable;
-import android.support.v4.BuildConfig;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
 import com.mx.R;
+import com.mx.config.BuildConfig;
 import com.mx.event.StatusEvent;
 import com.mx.iView.ISettingFragmentView;
 import com.mx.model.UpdateItem;
@@ -139,12 +141,38 @@ public class SettingsFragment extends PreferenceFragment implements ISettingFrag
     }
 
     @Override
-    public void showUpdateDialog(UpdateItem updateItem) {
+    public void showUpdateDialog(final UpdateItem updateItem) {
+
+        new AlertDialog.Builder(getActivity())
+                .setTitle(getString(R.string.update_title))
+                .setMessage(String.format(getString(R.string.update_description),
+                        updateItem.getVersionName(),
+                        updateItem.getReleaseNote()))
+                .setPositiveButton(getString(R.string.update_button), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse(updateItem.getDoenloadUrl())));
+                    }
+                })
+                .setNegativeButton(getString(R.string.common_cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        getActivity().finish();
+                    }
+                })
+                .show();
 
     }
 
     @Override
     public void showNoUpdate() {
+        if(getActivity()!=null){
+            Toast.makeText(getActivity(),
+                    getString(R.string.update_no_update),
+                    Toast.LENGTH_SHORT).show();
+        }
 
 
     }
